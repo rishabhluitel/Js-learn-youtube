@@ -63,4 +63,4 @@ function checkArr(getArray){
 return getArray[1];
 }
 
-console.log(checkArr(arr));
+console.log(checkArr(arr)); 
