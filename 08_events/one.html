@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="images">
+      <li>
+        <img
+          id="owl"
+          src="https://picsum.photos/id/238/200/200
+          "
+          alt="building"
+        />
+      </li>
+      <li>
+        <img src="https://picsum.photos/id/237/200/200
+        " alt="" id="dog">
+      </li>
+      <li>
+        <img src="https://picsum.photos/id/239/200/200
+        " alt="" id="flower">
+      </li>
+    </ul>
+  </body>
+
+  <script>
+    // alert("Owl");
+
+    //type,timestamp,preventDefault
+    //target,toElement,srcElement,currentTarget
+    //clientX,clientY,screenX,screenY
+    //altkey,ctrlkey,shiftkey,keycode
+
+    //event propagation
+    //eventbubbling and event capturing
+
+    // document.getElementById("owl").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log(e.type);
+    //     console.log(e.timeStamp);
+    //     console.log(e.preventDefault);
+    //     console.log(e.target);
+    //     console.log(e.srcElement);
+    //     console.log(e.altKey);
+    //     console.log(e.ctrlKey);
+    //     console.log(e.shiftKey);
+    //     console.log(e.clientX);
+    //     console.log(e.clientY);
+    //     console.log(e.screenX);
+    //     console.log(e.screenY);
+
+    //   },
+    //   false
+    // );
+    // document.getElementById('images').addEventListener("click",()=>{
+    //     console.log("Clicked inside the UL");
+    // },false)
+    // document.getElementById('owl').addEventListener("click",(e)=>{
+    //     console.log("Clicked inside the Li");
+    //     e.stopPropagation();
+    // },false)
+document.querySelector('#images').addEventListener('click',(e)=>{
+console.log(e.target.parentNode);
+let removeIt=e.target.parentNode;
+// removeIt.parentNode.removeChild(removeIt);
+removeIt.remove();
+},false)
+
+
+  </script>
+</html>
